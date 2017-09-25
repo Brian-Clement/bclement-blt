@@ -359,3 +359,18 @@
 #    'uri' => 'http://example.com',
 #    'root' => $aliases['dev']['root'],
 #  ) + $aliases['server'];
+
+// Local environment.
+$aliases['bclement-blt.local'] = array(
+  'root' => '/var/www/bclement-blt/docroot',
+  'uri' => 'http://local.bclement-blt.com',
+  );
+// Add remote connection options when alias is used outside VM.
+if ('vagrant' != $_SERVER['USER']) {
+  $aliases['bclement-blt.local'] += array(
+    'remote-host' => 'local.bclement-blt.com',
+    'remote-user' => 'vagrant',
+    'ssh-options' => '-o PasswordAuthentication=no -i ' . drush_server_home() . '/.vagrant.d/insecure_private_key'
+  );
+}
+
