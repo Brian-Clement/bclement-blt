@@ -1,9 +1,15 @@
 {
-    "name": "acquia/blt-project",
-    "description": "Project template for Drupal 8 sites built with BLT.",
+    "name": "brian-clement/bclement-blt",
+    "description": "Drupal 8 site built with Acquia BLT.",
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": {
+      "drupal": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+      }
+    },
     "require": {
         "acquia/blt": "^8.3",
         "geerlingguy/drupal-vm": "~4.3"
