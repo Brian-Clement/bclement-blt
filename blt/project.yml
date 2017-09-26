@@ -3,7 +3,7 @@ project:
   prefix: BC
   human_name: 'Brian Clement'
   profile:
-    name: standard
+    name: config_installer
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
